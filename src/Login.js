@@ -1,20 +1,14 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import "./Login.css";
 class Login extends Component {
-  state = {
-    user: "",
-  };
-  handleChange = (event) => {
-    const input = event;
-    console.log(input.target.value);
-    this.setState({ user: input.target.value });
-  };
-  handleFormSubmit = () => {
-    const { user } = this.state;
-    console.log(user);
-    localStorage.setItem("user", user);
-  };
+  
+
+
   render() {
+    const {user,email} = this.props;
+
+    
     return (
       <div>
         <div className="container" id="box">
@@ -26,17 +20,35 @@ class Login extends Component {
             <div className="input-group mb-3">
               <div className="input-group-prepend">
                 <span className="input-group-text" id="basic-addon1">
+                  <i className="fa fa-key"></i>
+                </span>
+              </div>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                placeholder="Enter your Name"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                onChange={(e) => this.props.handleNameChange(e)}
+                required
+              />
+            </div>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
                   <i className="fa fa-user"></i>
                 </span>
               </div>
+
               <input
                 type="email"
                 className="form-control"
                 name="email"
                 placeholder="Enter your email"
-                aria-label="Username"
+                aria-label="UserEmail"
                 aria-describedby="basic-addon1"
-                onChange={this.handleChange}
+                onChange={(e) => this.props.handleEmailChange(e)}
                 required
               />
             </div>
@@ -56,9 +68,10 @@ class Login extends Component {
                 required
               />
             </div>
+
             <button
               className="btn btn-primary btn-lg btn-block"
-              onClick={this.handleFormSubmit}
+              onClick={() => this.props.handleFormSubmit(user,email)}
             >
               {" "}
               Sign In <i className="fa fa-sign-in"></i>

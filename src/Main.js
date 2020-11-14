@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import Navbar from './Navbar'
+import Navbar from "./Navbar";
 class Main extends Component {
   render() {
+    const user = localStorage.getItem("user");
     return (
       <div>
-        <Navbar/>
-        <h1>HomePage!</h1>
+        
+        <iframe src="https://codingninjas.in" title="W3Schools Free Online Web Tutorials">
+        </iframe>
+
       </div>
     );
   }
