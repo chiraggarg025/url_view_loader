@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import "./Login.css";
 class Login extends Component {
-  
-
-
   render() {
-    const {user,email} = this.props;
+    const { user, email } = this.props;
 
-    
     return (
       <div>
         <div className="container" id="box">
@@ -70,17 +65,11 @@ class Login extends Component {
             </div>
 
             <button
-              className="btn btn-primary btn-lg btn-block"
-              onClick={() => this.props.handleFormSubmit(user,email)}
+              className="btn btn-danger btn-lg btn-block"
+              onClick={() => this.props.handleFormSubmit(user, email)}
             >
               {" "}
               Sign In <i className="fa fa-sign-in"></i>
-            </button>
-            <p>
-              <strong>or</strong>
-            </p>
-            <button className="btn btn-lg btn-danger btn-block">
-              <i className="fa fa-google"></i> Continue with Google
             </button>
           </div>
         </div>
