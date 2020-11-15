@@ -22,6 +22,7 @@ hr {
   border: 1px solid gray;
   background-color: gray;
 }
+/* responsive media queries */
 
 @media screen and (max-width: 992px) {
   #box {

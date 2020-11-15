@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+/* view component */
 .main {
   width: 100%;
   height: 100%;
@@ -23,6 +24,7 @@ body {
 .App {
   text-align: center;
 }
+/* responsive media queries */
 @media only screen and (max-width: 600px) {
   .views {
     flex-direction: column;

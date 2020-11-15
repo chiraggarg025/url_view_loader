@@ -20,9 +20,6 @@ function Navbar({
         <NavbarBootStrap.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" style={{ width: "100%", padding: "1%" }}>
             <ul className="navbar-nav justify-content-between w-100">
-              {/* <li>
-                <span className="nav-link active">Home</span>
-              </li> */}
               <li>
                 {isLoggedIn ? (
                   <input
