@@ -15,6 +15,7 @@ class App extends Component {
       isLoggedIn: false,
     };
   }
+  // checking if user is logged in
   componentDidMount() {
     const user = localStorage.getItem("user");
     if (user != null) {
@@ -40,6 +41,10 @@ class App extends Component {
       alert("Enter user name");
       return;
     }
+    if (email === "") {
+      alert("Enter email ");
+      return;
+    }
     this.setState({ isLoggedIn: true });
     localStorage.setItem("user", user);
     localStorage.setItem("email", email);
@@ -49,7 +54,6 @@ class App extends Component {
     const input = event;
 
     this.setState({ url1: input.target.value });
-    console.log(this.state);
   }
   // changing the state when input is entered in second box
   handleURL2Change(event) {

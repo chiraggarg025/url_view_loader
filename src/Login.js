@@ -3,7 +3,7 @@ import "./Login.css";
 class Login extends Component {
   render() {
     const { user, email } = this.props;
-
+// Login component
     return (
       <div>
         <div className="container" id="box">
